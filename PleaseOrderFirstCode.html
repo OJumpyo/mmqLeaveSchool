@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>
+        北邮体育馆    </title>
+    <link rel="stylesheet" href="C:\Users\10746\Desktop\健身房\bootstrap.min.css">
+    <link rel="stylesheet" href="C:\Users\10746\Desktop\健身房\font-awesome.min.css">
+    <link rel="stylesheet" href="C:\Users\10746\Desktop\健身房\main.css"/>
+    <link rel="stylesheet" href="C:\Users\10746\Desktop\健身房\my_register.css"/>
+</head>
+<body>
+<header class="header">
+    <div class="header-title">
+        <div class="col-xs-2">
+           <a href="/index.php/Wechat/Show/index"><img src="//storage.joyreserve.com/Public/Wechat/img/left.png"/></a>
+        </div>
+        <div class="col-xs-8">
+            <h1 class="title">我的今日预约</h1>
+
+        </div>
+    </div>
+    <br>
+        <br>
+        <h3 class="title" style="width:300px;margin: auto;">当前暂无可签到订单，请先完成预约</h3>
+        <br>
+        <br>
+        <a href="/index.php/Wechat/Show/index" type="button" class="btn btn-success btn-warning" style="width: 130px;background: rgb(72,211,183);color: white;">去预约</a></header>
+<!--<div>-->
+<!--<a href="/index.php/Wechat/Personal/register_list">-->
+
+<!--<p></p>-->
+<!--</a>-->
+<!--</div>-->
+<section class="my_register">
+    <!--<a href="/index.php/Wechat/Personal/register_list">-->
+    <!--<div class="media">-->
+    <!--<div class="media-left">-->
+    <!--<img src="//storage.joyreserve.com/Public/Wechat/img/calender.png"/>-->
+    <!--</div>-->
+    <!--<div class="media-body">-->
+    <!--<h3>我的今日预约表</h3>-->
+    <!--</div>-->
+    <!--<div class="media-right">-->
+    <!--<img src="//storage.joyreserve.com/Public/Wechat/img/right.png"/>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</a>-->
+    <div class="list" >
+            </div>
+</section>
+
+</body>
+<script type="text/javascript">
+
+
+    //点击签到
+    function attend(reservation_id, time_id) {
+        window.location.href="/index.php/Wechat/Attend/orders_attend?reservation_id=" + reservation_id + "&time_id=" + time_id;
+    }
+
+    //点击d订单签到
+    function attend_order(reservation_id, time_id) {
+        window.location.href="/index.php/Wechat/Attend/orders_attend_order?reservation_id=" + reservation_id + "&time_id=" + time_id;
+    }
+
+
+</script>
+</html>
