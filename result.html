@@ -1,4 +1,6 @@
-<!DOCTYPE html><html><head>
+<!DOCTYPE html>
+<html>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
@@ -7,19 +9,47 @@
     <link rel="stylesheet" href="font-awesome.min.css">
     <link rel="stylesheet" href="main.css"/>
     <link rel="stylesheet" href="my_register.css"/>
-<style id="__WXWORK_INNER_SCROLLBAR_CSS">::-webkit-scrollbar { width: 12px !important; height: 12px !important; }::-webkit-scrollbar-track:vertical {  }::-webkit-scrollbar-thumb:vertical { background-color: rgba(136, 141, 152, 0.5) !important; border-radius: 10px !important; background-clip: content-box !important; border:2px solid transparent !important; } ::-webkit-scrollbar-track:horizontal {  }::-webkit-scrollbar-thumb:horizontal { background-color: rgba(136, 141, 152, 0.5) !important; border-radius: 10px !important; background-clip: content-box !important; border:2px solid transparent !important; } ::-webkit-resizer { display: none !important; }</style></head>
+    <style id="__WXWORK_INNER_SCROLLBAR_CSS">::-webkit-scrollbar {
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    ::-webkit-scrollbar-track:vertical {
+    }
+
+    ::-webkit-scrollbar-thumb:vertical {
+        background-color: rgba(136, 141, 152, 0.5) !important;
+        border-radius: 10px !important;
+        background-clip: content-box !important;
+        border: 2px solid transparent !important;
+    }
+
+    ::-webkit-scrollbar-track:horizontal {
+    }
+
+    ::-webkit-scrollbar-thumb:horizontal {
+        background-color: rgba(136, 141, 152, 0.5) !important;
+        border-radius: 10px !important;
+        background-clip: content-box !important;
+        border: 2px solid transparent !important;
+    }
+
+    ::-webkit-resizer {
+        display: none !important;
+    }</style>
+</head>
 <body>
 <header class="header">
     <div class="header-title">
         <div class="col-xs-2">
-           <a href="/index.php/Wechat/Show/index"><img src="left.png"></a>
+            <a><img src="left.png"></a>
         </div>
         <div class="col-xs-8" style="font-size 15px;">
             <h1 class="title">我的今日预约</h1>
 
         </div>
     </div>
-    </header>
+</header>
 <!--<div>-->
 <!--<a href="/index.php/Wechat/Personal/register_list">-->
 
@@ -41,18 +71,28 @@
     <!--</div>-->
     <!--</a>-->
     <div class="list">
-        <div class="list-one" style="background: white;border-radius: 7px;padding: 20px;margin-bottom:8px;max-height: 50%;">
-                                            <div class="reserve-place" style="float:left;min-width: 180px;font-size: 23px;color: #999999;">健身房</div><!--预约地点-->
-                        <h5 class="reserve-id" style="float:right;font-size: 13.5px;margin-top: 13px;color:#999999;">#1293957</h5><!--预约编号-->
-                        <!-- <h5 id="reserve_tag">
-                                                    </h5> -->
-                                                    <div class="discription" style="margin-top: 44px;border-top: 1px solid #E5E5E5;padding-top: 15px; font-size: 15px;color: #999999;">预约时间：2022-05-20 20:30-22:00</div>                    
+        <div class="list-one"
+             style="background: white;border-radius: 7px;padding: 20px;margin-bottom:8px;max-height: 50%;">
+            <div class="reserve-place" style="float:left;min-width: 180px;font-size: 23px;color: #999999;">健身房</div>
+            <!--预约地点-->
+            <h5 class="reserve-id" style="float:right;font-size: 13.5px;margin-top: 13px;color:#999999;">#1293957</h5>
+            <!--预约编号-->
+            <!-- <h5 id="reserve_tag">
+                                        </h5> -->
+            <div class="discription" id="orderSection"
+                 style="margin-top: 44px;border-top: 1px solid #E5E5E5;padding-top: 15px; font-size: 15px;color: #999999;">
+                预约时间：2022-05-20 20:30-22:00
+            </div>
 
-                    <div class="button-section" style="min-height:80px;">
-                                                <div class="discription" style="padding-top: 5px; font-size: 15px;color: #999999;">签到时间：05-26 20:23</div>
-<!--签到成功的颜色#FFA287-->
-                            <a href="gif.html" style="margin-top:15px;color: white;border-radius: 5px;background-color: #FFA287;font-size: 17px;text-align: center;padding:11px 0;width: 100%;display: inline-block;">已签到 </a>                    </div>
-                </div>    </div>
+            <div class="button-section"  style="min-height:80px;">
+                <div class="discription" id="checkInTime" style="padding-top: 5px; font-size: 15px;color: #999999;">签到时间：05-26 20:23
+                </div>
+                <!--签到成功的颜色#FFA287-->
+                <a href="gif.html"
+                   style="margin-top:15px;color: white;border-radius: 5px;background-color: #FFA287;font-size: 17px;text-align: center;padding:11px 0;width: 100%;display: inline-block;">已签到 </a>
+            </div>
+        </div>
+    </div>
 </section>
 
 
@@ -61,14 +101,78 @@
 
     //点击签到
     function attend(reservation_id, time_id) {
-        window.location.href="/index.php/Wechat/Attend/orders_attend?reservation_id=" + reservation_id + "&time_id=" + time_id;
+        window.location.href = "/index.php/Wechat/Attend/orders_attend?reservation_id=" + reservation_id + "&time_id=" + time_id;
     }
 
     //点击d订单签到
     function attend_order(reservation_id, time_id) {
-        window.location.href="/index.php/Wechat/Attend/orders_attend_order?reservation_id=" + reservation_id + "&time_id=" + time_id;
+        window.location.href = "/index.php/Wechat/Attend/orders_attend_order?reservation_id=" + reservation_id + "&time_id=" + time_id;
     }
 
+    // 判断当前场次信息
+    function checkOrderSection(beginTime, endTime) {
+
+        var nowDate = new Date();
+        var beginDate = new Date(nowDate);
+        var endDate = new Date(nowDate);
+
+        var beginIndex = beginTime.lastIndexOf("\:");
+        var beginHour = beginTime.substring(0, beginIndex);
+        var beginMinue = beginTime.substring(beginIndex + 1, beginTime.length);
+        beginDate.setHours(beginHour, beginMinue, 0, 0);
+
+        var endIndex = endTime.lastIndexOf("\:");
+        var endHour = endTime.substring(0, endIndex);
+        var endMinue = endTime.substring(endIndex + 1, endTime.length);
+        endDate.setHours(endHour, endMinue, 0, 0);
+
+
+        return nowDate.getTime() - beginDate.getTime() >= 0 && nowDate.getTime() <= endDate.getTime();
+    }
+
+    //输出结果，日期 + 当前场次是哪一场
+    function getOrderInfo(objD) {
+        var str, res;
+        var yy = objD.getFullYear();
+        var MM = objD.getMonth() + 1;
+        if (MM < 10) MM = '0' + MM;
+        var dd = objD.getDate();
+        if (dd < 10) dd = '0' + dd;
+        var hh = objD.getHours();
+        if (hh < 10) hh = '0' + hh;
+        var mm = objD.getMinutes();
+        if (mm < 10) mm = '0' + mm;
+        var ss = objD.getSeconds();
+        if (ss < 10) ss = '0' + ss;
+
+        //截止签到时间，在此之前的对应当前场次，否则输出下一场次信息
+        const times = ["00:00", "09:30", "12:00", "14:30", "17:00", "19:30", "22:00"];
+        const sections = ["08:00-09:30", "08:00-09:30", "10:30-12:00", "13:00-14:30", "15:30-17:00", "18:00-19:30", "20:30-22:00"];
+        for (let i = 1; i < times.length; i++) {
+            if(checkOrderSection(times[i-1], times[i])) {
+                str = sections[i];
+                break;
+            }
+        }
+        res = "预约时间：" + yy + "-" + MM + "-" + dd + " " + str;
+        return (res);
+    }
+
+    //返回签到的时间，格式为 “签到时间：05-26 20:23”
+    function getCheckInTime(objD) {
+        var MM = objD.getMonth() + 1;
+        if (MM < 10) MM = '0' + MM;
+        var dd = objD.getDate();
+        if (dd < 10) dd = '0' + dd;
+        var hh = objD.getHours();
+        if (hh < 10) hh = '0' + hh;
+        var mm = objD.getMinutes();
+        if (mm < 10) mm = '0' + mm;
+        return   "签到时间：" + MM + "-" + dd + " " + hh + ":" + mm;
+    }
+    document.getElementById("orderSection").innerHTML = getOrderInfo(new Date());
+    document.getElementById("checkInTime").innerHTML = getCheckInTime(new Date());
 
 </script>
-</body></html>
+</body>
+</html>
